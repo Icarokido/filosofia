@@ -1,0 +1,102 @@
+/* Configurações Globais para Acessibilidade */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Fonte limpa e legível */
+    line-height: 1.6;
+    background-color: #f4f4f9; /* Fundo claro para contraste suave */
+    color: #1a1a1a; /* Texto escuro para alto contraste */
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Esconde elementos visualmente, mas mantém para leitores de tela */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.sr-only:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+}
+
+/* Cabeçalho e Navegação */
+header {
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: underline; /* Links sublinhados para facilitar identificação */
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+/* Indicação clara de foco para navegação por teclado */
+nav a:focus, nav a:hover {
+    outline: 3px solid #f1c40f;
+    background-color: #34495e;
+    border-radius: 4px;
+}
+
+/* Conteúdo Principal */
+main section {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border-left: 5px solid #2c3e50;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+    color: #555555;
+}
